@@ -34,45 +34,49 @@
             this.btnEnviar = new System.Windows.Forms.Button();
             this.lblPara = new System.Windows.Forms.Label();
             this.lblContenido = new System.Windows.Forms.Label();
+            this.lblDe = new System.Windows.Forms.Label();
+            this.txtBoxDe = new System.Windows.Forms.TextBox();
             this.grpBoxEnviarCorreu.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpBoxEnviarCorreu
             // 
+            this.grpBoxEnviarCorreu.Controls.Add(this.lblDe);
+            this.grpBoxEnviarCorreu.Controls.Add(this.txtBoxDe);
             this.grpBoxEnviarCorreu.Controls.Add(this.lblContenido);
             this.grpBoxEnviarCorreu.Controls.Add(this.lblPara);
             this.grpBoxEnviarCorreu.Controls.Add(this.btnEnviar);
             this.grpBoxEnviarCorreu.Controls.Add(this.txtBoxContenido);
             this.grpBoxEnviarCorreu.Controls.Add(this.txtBoxPara);
-            this.grpBoxEnviarCorreu.Location = new System.Drawing.Point(193, 83);
+            this.grpBoxEnviarCorreu.Location = new System.Drawing.Point(192, 36);
             this.grpBoxEnviarCorreu.Name = "grpBoxEnviarCorreu";
-            this.grpBoxEnviarCorreu.Size = new System.Drawing.Size(372, 258);
+            this.grpBoxEnviarCorreu.Size = new System.Drawing.Size(473, 321);
             this.grpBoxEnviarCorreu.TabIndex = 0;
             this.grpBoxEnviarCorreu.TabStop = false;
             this.grpBoxEnviarCorreu.Text = "Enviar Correu";
             // 
             // txtBoxPara
             // 
-            this.txtBoxPara.Location = new System.Drawing.Point(89, 31);
+            this.txtBoxPara.Location = new System.Drawing.Point(100, 80);
             this.txtBoxPara.Name = "txtBoxPara";
             this.txtBoxPara.ReadOnly = true;
-            this.txtBoxPara.Size = new System.Drawing.Size(259, 20);
+            this.txtBoxPara.Size = new System.Drawing.Size(354, 20);
             this.txtBoxPara.TabIndex = 0;
-            this.txtBoxPara.Text = "ruben.martinez.simon@sarria.salesians.cat";
+            this.txtBoxPara.Text = "marc.morata@sarria.salesians.cat";
             // 
             // txtBoxContenido
             // 
-            this.txtBoxContenido.Location = new System.Drawing.Point(89, 70);
+            this.txtBoxContenido.Location = new System.Drawing.Point(100, 119);
             this.txtBoxContenido.Multiline = true;
             this.txtBoxContenido.Name = "txtBoxContenido";
             this.txtBoxContenido.ReadOnly = true;
-            this.txtBoxContenido.Size = new System.Drawing.Size(259, 140);
+            this.txtBoxContenido.Size = new System.Drawing.Size(354, 140);
             this.txtBoxContenido.TabIndex = 1;
             this.txtBoxContenido.Text = "Hula";
             // 
             // btnEnviar
             // 
-            this.btnEnviar.Location = new System.Drawing.Point(291, 229);
+            this.btnEnviar.Location = new System.Drawing.Point(392, 292);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(75, 23);
             this.btnEnviar.TabIndex = 2;
@@ -83,20 +87,38 @@
             // lblPara
             // 
             this.lblPara.AutoSize = true;
-            this.lblPara.Location = new System.Drawing.Point(28, 34);
+            this.lblPara.Location = new System.Drawing.Point(23, 83);
             this.lblPara.Name = "lblPara";
-            this.lblPara.Size = new System.Drawing.Size(29, 13);
+            this.lblPara.Size = new System.Drawing.Size(32, 13);
             this.lblPara.TabIndex = 3;
-            this.lblPara.Text = "Para";
+            this.lblPara.Text = "Para:";
             // 
             // lblContenido
             // 
             this.lblContenido.AutoSize = true;
-            this.lblContenido.Location = new System.Drawing.Point(28, 70);
+            this.lblContenido.Location = new System.Drawing.Point(23, 119);
             this.lblContenido.Name = "lblContenido";
-            this.lblContenido.Size = new System.Drawing.Size(55, 13);
+            this.lblContenido.Size = new System.Drawing.Size(58, 13);
             this.lblContenido.TabIndex = 4;
-            this.lblContenido.Text = "Contenido";
+            this.lblContenido.Text = "Contenido:";
+            // 
+            // lblDe
+            // 
+            this.lblDe.AutoSize = true;
+            this.lblDe.Location = new System.Drawing.Point(23, 47);
+            this.lblDe.Name = "lblDe";
+            this.lblDe.Size = new System.Drawing.Size(24, 13);
+            this.lblDe.TabIndex = 6;
+            this.lblDe.Text = "De:";
+            // 
+            // txtBoxDe
+            // 
+            this.txtBoxDe.Location = new System.Drawing.Point(100, 44);
+            this.txtBoxDe.Name = "txtBoxDe";
+            this.txtBoxDe.ReadOnly = true;
+            this.txtBoxDe.Size = new System.Drawing.Size(354, 20);
+            this.txtBoxDe.TabIndex = 5;
+            this.txtBoxDe.Text = "ruben.martinez.simon@sarria.salesians.cat";
             // 
             // EnviarCorreo
             // 
@@ -121,6 +143,8 @@
         private System.Windows.Forms.Button btnEnviar;
         private System.Windows.Forms.TextBox txtBoxContenido;
         private System.Windows.Forms.TextBox txtBoxPara;
+        private System.Windows.Forms.Label lblDe;
+        private System.Windows.Forms.TextBox txtBoxDe;
     }
 }
 

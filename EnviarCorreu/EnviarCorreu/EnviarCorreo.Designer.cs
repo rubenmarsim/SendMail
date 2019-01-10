@@ -126,7 +126,7 @@
             this.txtBoxDe.ReadOnly = true;
             this.txtBoxDe.Size = new System.Drawing.Size(354, 20);
             this.txtBoxDe.TabIndex = 5;
-            this.txtBoxDe.Text = "marc.morata@sarria.salesians.cat";
+            this.txtBoxDe.Text = "insigns2am@gmail.com";
             // 
             // lblAsunto
             // 

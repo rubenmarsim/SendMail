@@ -67,7 +67,6 @@
             // 
             this.txtBoxPara.Location = new System.Drawing.Point(100, 69);
             this.txtBoxPara.Name = "txtBoxPara";
-            this.txtBoxPara.ReadOnly = true;
             this.txtBoxPara.Size = new System.Drawing.Size(354, 20);
             this.txtBoxPara.TabIndex = 0;
             this.txtBoxPara.Text = "ruben.martinez.simon@sarria.salesians.cat";
@@ -77,7 +76,6 @@
             this.txtBoxContenido.Location = new System.Drawing.Point(100, 146);
             this.txtBoxContenido.Multiline = true;
             this.txtBoxContenido.Name = "txtBoxContenido";
-            this.txtBoxContenido.ReadOnly = true;
             this.txtBoxContenido.Size = new System.Drawing.Size(354, 140);
             this.txtBoxContenido.TabIndex = 1;
             this.txtBoxContenido.Text = "Buenos Dias";
@@ -143,7 +141,6 @@
             this.txtBoxAsunto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBoxAsunto.Location = new System.Drawing.Point(100, 107);
             this.txtBoxAsunto.Name = "txtBoxAsunto";
-            this.txtBoxAsunto.ReadOnly = true;
             this.txtBoxAsunto.Size = new System.Drawing.Size(354, 20);
             this.txtBoxAsunto.TabIndex = 7;
             this.txtBoxAsunto.Text = "Hula";

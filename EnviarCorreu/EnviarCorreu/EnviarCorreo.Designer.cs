@@ -68,7 +68,7 @@
             this.txtBoxPara.Location = new System.Drawing.Point(100, 69);
             this.txtBoxPara.Name = "txtBoxPara";
             this.txtBoxPara.Size = new System.Drawing.Size(354, 20);
-            this.txtBoxPara.TabIndex = 0;
+            this.txtBoxPara.TabIndex = 1;
             this.txtBoxPara.Text = "ruben.martinez.simon@sarria.salesians.cat";
             // 
             // txtBoxContenido
@@ -77,7 +77,7 @@
             this.txtBoxContenido.Multiline = true;
             this.txtBoxContenido.Name = "txtBoxContenido";
             this.txtBoxContenido.Size = new System.Drawing.Size(354, 140);
-            this.txtBoxContenido.TabIndex = 1;
+            this.txtBoxContenido.TabIndex = 3;
             this.txtBoxContenido.Text = "Buenos Dias";
             // 
             // btnEnviar
@@ -85,7 +85,7 @@
             this.btnEnviar.Location = new System.Drawing.Point(379, 324);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(75, 23);
-            this.btnEnviar.TabIndex = 2;
+            this.btnEnviar.TabIndex = 5;
             this.btnEnviar.Text = "Enviar";
             this.btnEnviar.UseVisualStyleBackColor = true;
             this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
@@ -96,7 +96,7 @@
             this.lblPara.Location = new System.Drawing.Point(23, 72);
             this.lblPara.Name = "lblPara";
             this.lblPara.Size = new System.Drawing.Size(32, 13);
-            this.lblPara.TabIndex = 3;
+            this.lblPara.TabIndex = 7;
             this.lblPara.Text = "Para:";
             // 
             // lblContenido
@@ -105,7 +105,7 @@
             this.lblContenido.Location = new System.Drawing.Point(23, 146);
             this.lblContenido.Name = "lblContenido";
             this.lblContenido.Size = new System.Drawing.Size(58, 13);
-            this.lblContenido.TabIndex = 4;
+            this.lblContenido.TabIndex = 9;
             this.lblContenido.Text = "Contenido:";
             // 
             // lblDe
@@ -123,7 +123,7 @@
             this.txtBoxDe.Name = "txtBoxDe";
             this.txtBoxDe.ReadOnly = true;
             this.txtBoxDe.Size = new System.Drawing.Size(354, 20);
-            this.txtBoxDe.TabIndex = 5;
+            this.txtBoxDe.TabIndex = 0;
             this.txtBoxDe.Text = "insigns2am@gmail.com";
             // 
             // lblAsunto
@@ -142,7 +142,7 @@
             this.txtBoxAsunto.Location = new System.Drawing.Point(100, 107);
             this.txtBoxAsunto.Name = "txtBoxAsunto";
             this.txtBoxAsunto.Size = new System.Drawing.Size(354, 20);
-            this.txtBoxAsunto.TabIndex = 7;
+            this.txtBoxAsunto.TabIndex = 2;
             this.txtBoxAsunto.Text = "Hula";
             // 
             // lblPassword
@@ -160,7 +160,8 @@
             this.txtBoxPassword.Name = "txtBoxPassword";
             this.txtBoxPassword.PasswordChar = '*';
             this.txtBoxPassword.Size = new System.Drawing.Size(209, 20);
-            this.txtBoxPassword.TabIndex = 11;
+            this.txtBoxPassword.TabIndex = 4;
+            this.txtBoxPassword.Text = "12345_aA";
             // 
             // EnviarCorreo
             // 

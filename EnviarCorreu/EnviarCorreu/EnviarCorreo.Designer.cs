@@ -162,6 +162,7 @@
             this.txtBoxPassword.Size = new System.Drawing.Size(209, 20);
             this.txtBoxPassword.TabIndex = 4;
             this.txtBoxPassword.Text = "12345_aA";
+            this.txtBoxPassword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBoxPassword_KeyUp);
             // 
             // EnviarCorreo
             // 
@@ -172,7 +173,6 @@
             this.Name = "EnviarCorreo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Enviar Correo";
-            this.Load += new System.EventHandler(this.EnviarCorreo_Load);
             this.grpBoxEnviarCorreu.ResumeLayout(false);
             this.grpBoxEnviarCorreu.PerformLayout();
             this.ResumeLayout(false);

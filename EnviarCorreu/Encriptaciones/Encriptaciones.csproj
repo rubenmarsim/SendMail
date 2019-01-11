@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>C:\Users\admin\Documents\GitHub\SendMail\EnviarCorreu\dll\</OutputPath>
+    <DocumentationFile>C:\Users\admin\Documents\GitHub\SendMail\EnviarCorreu\Encriptaciones\Encriptaciones.xml</DocumentationFile>
+  </PropertyGroup>
+
+</Project>

@@ -29,28 +29,20 @@
         private void InitializeComponent()
         {
             this.grpBoxEnviarCorreu = new System.Windows.Forms.GroupBox();
-            this.txtBoxPara = new System.Windows.Forms.TextBox();
-            this.txtBoxContenido = new System.Windows.Forms.TextBox();
-            this.btnEnviar = new System.Windows.Forms.Button();
-            this.lblPara = new System.Windows.Forms.Label();
-            this.lblContenido = new System.Windows.Forms.Label();
-            this.lblDe = new System.Windows.Forms.Label();
-            this.txtBoxDe = new System.Windows.Forms.TextBox();
             this.lblAsunto = new System.Windows.Forms.Label();
             this.txtBoxAsunto = new System.Windows.Forms.TextBox();
-            this.lblPassword = new System.Windows.Forms.Label();
-            this.txtBoxPassword = new System.Windows.Forms.TextBox();
+            this.lblContenido = new System.Windows.Forms.Label();
+            this.lblPara = new System.Windows.Forms.Label();
+            this.btnEnviar = new System.Windows.Forms.Button();
+            this.txtBoxContenido = new System.Windows.Forms.TextBox();
+            this.txtBoxPara = new System.Windows.Forms.TextBox();
             this.grpBoxEnviarCorreu.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpBoxEnviarCorreu
             // 
-            this.grpBoxEnviarCorreu.Controls.Add(this.txtBoxPassword);
-            this.grpBoxEnviarCorreu.Controls.Add(this.lblPassword);
             this.grpBoxEnviarCorreu.Controls.Add(this.lblAsunto);
             this.grpBoxEnviarCorreu.Controls.Add(this.txtBoxAsunto);
-            this.grpBoxEnviarCorreu.Controls.Add(this.lblDe);
-            this.grpBoxEnviarCorreu.Controls.Add(this.txtBoxDe);
             this.grpBoxEnviarCorreu.Controls.Add(this.lblContenido);
             this.grpBoxEnviarCorreu.Controls.Add(this.lblPara);
             this.grpBoxEnviarCorreu.Controls.Add(this.btnEnviar);
@@ -62,69 +54,6 @@
             this.grpBoxEnviarCorreu.TabIndex = 0;
             this.grpBoxEnviarCorreu.TabStop = false;
             this.grpBoxEnviarCorreu.Text = "Enviar Correu";
-            // 
-            // txtBoxPara
-            // 
-            this.txtBoxPara.Location = new System.Drawing.Point(100, 69);
-            this.txtBoxPara.Name = "txtBoxPara";
-            this.txtBoxPara.Size = new System.Drawing.Size(354, 20);
-            this.txtBoxPara.TabIndex = 1;
-            this.txtBoxPara.Text = "ruben.martinez.simon@sarria.salesians.cat";
-            // 
-            // txtBoxContenido
-            // 
-            this.txtBoxContenido.Location = new System.Drawing.Point(100, 146);
-            this.txtBoxContenido.Multiline = true;
-            this.txtBoxContenido.Name = "txtBoxContenido";
-            this.txtBoxContenido.Size = new System.Drawing.Size(354, 140);
-            this.txtBoxContenido.TabIndex = 3;
-            this.txtBoxContenido.Text = "Buenos Dias";
-            // 
-            // btnEnviar
-            // 
-            this.btnEnviar.Location = new System.Drawing.Point(379, 324);
-            this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Size = new System.Drawing.Size(75, 23);
-            this.btnEnviar.TabIndex = 5;
-            this.btnEnviar.Text = "Enviar";
-            this.btnEnviar.UseVisualStyleBackColor = true;
-            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
-            // 
-            // lblPara
-            // 
-            this.lblPara.AutoSize = true;
-            this.lblPara.Location = new System.Drawing.Point(23, 72);
-            this.lblPara.Name = "lblPara";
-            this.lblPara.Size = new System.Drawing.Size(32, 13);
-            this.lblPara.TabIndex = 7;
-            this.lblPara.Text = "Para:";
-            // 
-            // lblContenido
-            // 
-            this.lblContenido.AutoSize = true;
-            this.lblContenido.Location = new System.Drawing.Point(23, 146);
-            this.lblContenido.Name = "lblContenido";
-            this.lblContenido.Size = new System.Drawing.Size(58, 13);
-            this.lblContenido.TabIndex = 9;
-            this.lblContenido.Text = "Contenido:";
-            // 
-            // lblDe
-            // 
-            this.lblDe.AutoSize = true;
-            this.lblDe.Location = new System.Drawing.Point(23, 34);
-            this.lblDe.Name = "lblDe";
-            this.lblDe.Size = new System.Drawing.Size(24, 13);
-            this.lblDe.TabIndex = 6;
-            this.lblDe.Text = "De:";
-            // 
-            // txtBoxDe
-            // 
-            this.txtBoxDe.Location = new System.Drawing.Point(100, 31);
-            this.txtBoxDe.Name = "txtBoxDe";
-            this.txtBoxDe.ReadOnly = true;
-            this.txtBoxDe.Size = new System.Drawing.Size(354, 20);
-            this.txtBoxDe.TabIndex = 0;
-            this.txtBoxDe.Text = "insigns2am@gmail.com";
             // 
             // lblAsunto
             // 
@@ -145,24 +74,50 @@
             this.txtBoxAsunto.TabIndex = 2;
             this.txtBoxAsunto.Text = "Hula";
             // 
-            // lblPassword
+            // lblContenido
             // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(29, 309);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(64, 13);
-            this.lblPassword.TabIndex = 10;
-            this.lblPassword.Text = "Contraseña:";
+            this.lblContenido.AutoSize = true;
+            this.lblContenido.Location = new System.Drawing.Point(23, 146);
+            this.lblContenido.Name = "lblContenido";
+            this.lblContenido.Size = new System.Drawing.Size(58, 13);
+            this.lblContenido.TabIndex = 9;
+            this.lblContenido.Text = "Contenido:";
             // 
-            // txtBoxPassword
+            // lblPara
             // 
-            this.txtBoxPassword.Location = new System.Drawing.Point(100, 304);
-            this.txtBoxPassword.Name = "txtBoxPassword";
-            this.txtBoxPassword.PasswordChar = '*';
-            this.txtBoxPassword.Size = new System.Drawing.Size(209, 20);
-            this.txtBoxPassword.TabIndex = 4;
-            this.txtBoxPassword.Text = "12345_aA";
-            this.txtBoxPassword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBoxPassword_KeyUp);
+            this.lblPara.AutoSize = true;
+            this.lblPara.Location = new System.Drawing.Point(23, 72);
+            this.lblPara.Name = "lblPara";
+            this.lblPara.Size = new System.Drawing.Size(32, 13);
+            this.lblPara.TabIndex = 7;
+            this.lblPara.Text = "Para:";
+            // 
+            // btnEnviar
+            // 
+            this.btnEnviar.Location = new System.Drawing.Point(379, 324);
+            this.btnEnviar.Name = "btnEnviar";
+            this.btnEnviar.Size = new System.Drawing.Size(75, 23);
+            this.btnEnviar.TabIndex = 5;
+            this.btnEnviar.Text = "Enviar";
+            this.btnEnviar.UseVisualStyleBackColor = true;
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
+            // 
+            // txtBoxContenido
+            // 
+            this.txtBoxContenido.Location = new System.Drawing.Point(100, 146);
+            this.txtBoxContenido.Multiline = true;
+            this.txtBoxContenido.Name = "txtBoxContenido";
+            this.txtBoxContenido.Size = new System.Drawing.Size(354, 140);
+            this.txtBoxContenido.TabIndex = 3;
+            this.txtBoxContenido.Text = "Buenos Dias";
+            // 
+            // txtBoxPara
+            // 
+            this.txtBoxPara.Location = new System.Drawing.Point(100, 69);
+            this.txtBoxPara.Name = "txtBoxPara";
+            this.txtBoxPara.Size = new System.Drawing.Size(354, 20);
+            this.txtBoxPara.TabIndex = 1;
+            this.txtBoxPara.Text = "ruben.martinez.simon@sarria.salesians.cat";
             // 
             // EnviarCorreo
             // 
@@ -173,6 +128,7 @@
             this.Name = "EnviarCorreo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Enviar Correo";
+            this.Load += new System.EventHandler(this.EnviarCorreo_Load);
             this.grpBoxEnviarCorreu.ResumeLayout(false);
             this.grpBoxEnviarCorreu.PerformLayout();
             this.ResumeLayout(false);
@@ -187,12 +143,8 @@
         private System.Windows.Forms.Button btnEnviar;
         private System.Windows.Forms.TextBox txtBoxContenido;
         private System.Windows.Forms.TextBox txtBoxPara;
-        private System.Windows.Forms.Label lblDe;
-        private System.Windows.Forms.TextBox txtBoxDe;
         private System.Windows.Forms.Label lblAsunto;
         private System.Windows.Forms.TextBox txtBoxAsunto;
-        private System.Windows.Forms.TextBox txtBoxPassword;
-        private System.Windows.Forms.Label lblPassword;
     }
 }
 

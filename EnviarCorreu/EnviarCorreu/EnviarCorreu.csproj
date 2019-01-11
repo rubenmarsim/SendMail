@@ -80,5 +80,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Encriptaciones\Encriptaciones.csproj">
+      <Project>{94aadc45-ef88-4742-8c65-7e6bed4bd506}</Project>
+      <Name>Encriptaciones</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

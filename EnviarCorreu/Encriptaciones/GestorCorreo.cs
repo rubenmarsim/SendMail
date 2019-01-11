@@ -2,6 +2,10 @@
 using System.Net.Mail;
 using System.Text;
 using System.Windows.Forms;
+using System.Xml;
+using System.Security.Cryptography;
+using System.Security.Cryptography.Xml;
+//using System.Security.Cryptography.Xml;
 
 namespace Encriptaciones
 {
@@ -10,6 +14,12 @@ namespace Encriptaciones
     /// </summary>
     public class GestorCorreo
     {
+        #region Variables Globales
+        RijndaelManaged key;
+        const string _Path = @"recursos\archivos\";
+        const string _Filename = "Users.xml";
+        #endregion
+
         #region Propiedades
         private string _Asunto;
         /// <summary>
@@ -111,18 +121,51 @@ namespace Encriptaciones
         /// </summary>
         public void GetCredencials()
         {
-            if (Enviador.Equals(string.Empty) || Contraseña.Equals(string.Empty))
-            {
-                DesencriptarXML();
-            }
+            //if (Enviador.Equals(string.Empty) || Contraseña.Equals(string.Empty))
+            //{
+                key = new RijndaelManaged();
+                XmlDocument xmlDoc = new XmlDocument();
+                xmlDoc.PreserveWhitespace = true;
+                xmlDoc.Load(_Path+_Filename);
+
+                DesencriptarXML(xmlDoc, key);
+            //}
         }
 
         /// <summary>
         /// Desencripta un XML
         /// </summary>
-        public void DesencriptarXML()
+        public void DesencriptarXML(XmlDocument Doc, SymmetricAlgorithm Alg)
         {
+            // Check the arguments.  
+            if (Doc == null)
+                throw new ArgumentNullException("Doc");
+            if (Alg == null)
+                throw new ArgumentNullException("Alg");
 
+            // Find the EncryptedData element in the XmlDocument.
+            XmlElement encryptedElement = Doc.GetElementsByTagName("EncryptedData")[0] as XmlElement;
+
+            // If the EncryptedData element was not found, throw an exception.
+            if (encryptedElement == null)
+            {
+                throw new XmlException("The EncryptedData element was not found.");
+            }
+
+
+            // Create an EncryptedData object and populate it.
+            EncryptedData edElement = new EncryptedData();
+            edElement.LoadXml(encryptedElement);
+
+            // Create a new EncryptedXml object.
+            EncryptedXml exml = new EncryptedXml();
+
+
+            // Decrypt the element using the symmetric key.
+            byte[] rgbOutput = exml.DecryptData(edElement, Alg);
+
+            // Replace the encryptedData element with the plaintext XML element.
+            exml.ReplaceData(encryptedElement, rgbOutput);
         }
 
         /// <summary>

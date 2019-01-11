@@ -4,14 +4,14 @@
         <name>EnviarCorreu</name>
     </assembly>
     <members>
+        <member name="T:EnviarCorreu.EnviarCorreo">
+            <summary>
+            Formulario para enviar correos
+            </summary>
+        </member>
         <member name="M:EnviarCorreu.EnviarCorreo.#ctor">
             <summary>
             Contructor por defecto
-            </summary>
-        </member>
-        <member name="M:EnviarCorreu.EnviarCorreo.EnviarMail">
-            <summary>
-            
             </summary>
         </member>
         <member name="F:EnviarCorreu.EnviarCorreo.components">

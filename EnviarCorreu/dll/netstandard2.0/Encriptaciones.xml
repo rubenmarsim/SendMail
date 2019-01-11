@@ -4,5 +4,63 @@
         <name>Encriptaciones</name>
     </assembly>
     <members>
+        <member name="T:Encriptaciones.GestorCorreo">
+            <summary>
+            Clase para la gestio de correos, envia correos, encripta y desencripta XMLs
+            </summary>
+        </member>
+        <member name="P:Encriptaciones.GestorCorreo.Asunto">
+            <summary>
+            Asunto del correo
+            </summary>
+        </member>
+        <member name="P:Encriptaciones.GestorCorreo.Contenido">
+            <summary>
+            Contenido del correo
+            </summary>
+        </member>
+        <member name="P:Encriptaciones.GestorCorreo.Destinatario">
+            <summary>
+            Destinatario del correo
+            </summary>
+        </member>
+        <member name="P:Encriptaciones.GestorCorreo.Enviador">
+            <summary>
+            Correo de la persona que va a enviar el correo
+            </summary>
+        </member>
+        <member name="P:Encriptaciones.GestorCorreo.Contraseña">
+            <summary>
+            Contraseña de la persona que va a enviar el correo
+            </summary>
+        </member>
+        <member name="M:Encriptaciones.GestorCorreo.#ctor">
+            <summary>
+            Constructor de la clase
+            </summary>
+        </member>
+        <member name="M:Encriptaciones.GestorCorreo.EnviarMail(System.String,System.String,System.String)">
+            <summary>
+            Envia un correo
+            </summary>
+            <param name="Subject">Asunto del correo</param>
+            <param name="Body">Contenido del correo</param>
+            <param name="To">Destinatario del correo</param>
+        </member>
+        <member name="M:Encriptaciones.GestorCorreo.GetCredencials">
+            <summary>
+            Coje el correo y la contraseña de la persona que envia el correo
+            </summary>
+        </member>
+        <member name="M:Encriptaciones.GestorCorreo.DesencriptarXML(System.Xml.XmlDocument,System.Security.Cryptography.SymmetricAlgorithm)">
+            <summary>
+            Desencripta un XML
+            </summary>
+        </member>
+        <member name="M:Encriptaciones.GestorCorreo.EncriptarXML">
+            <summary>
+            Encriptar un XML
+            </summary>
+        </member>
     </members>
 </doc>

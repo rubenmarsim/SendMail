@@ -124,6 +124,14 @@ namespace Encriptaciones
         {
 
         }
+
+        /// <summary>
+        /// Encriptar un XML
+        /// </summary>
+        public void EncriptarXML()
+        {
+
+        }
         #endregion
     }
 }

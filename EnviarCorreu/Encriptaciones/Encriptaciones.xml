@@ -57,7 +57,7 @@
             Desencripta un XML
             </summary>
         </member>
-        <member name="M:Encriptaciones.GestorCorreo.EncriptarXML">
+        <member name="M:Encriptaciones.GestorCorreo.EncriptarXML(System.Xml.XmlDocument,System.String,System.Security.Cryptography.SymmetricAlgorithm)">
             <summary>
             Encriptar un XML
             </summary>

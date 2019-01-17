@@ -15,9 +15,11 @@ namespace Encriptaciones
     public class GestorCorreo
     {
         #region Variables Globales
-        RijndaelManaged key;
+        RijndaelManaged key = null;
         const string _Path = @"recursos\archivos\";
         const string _Filename = "Users.xml";
+        bool _bEncrypt = true;
+        bool _bDecrypt = true;
         #endregion
 
         #region Propiedades
@@ -121,15 +123,27 @@ namespace Encriptaciones
         /// </summary>
         public void GetCredencials()
         {
-            //if (Enviador.Equals(string.Empty) || Contraseña.Equals(string.Empty))
-            //{
+            try
+            {
                 key = new RijndaelManaged();
                 XmlDocument xmlDoc = new XmlDocument();
                 xmlDoc.PreserveWhitespace = true;
-                xmlDoc.Load(_Path+_Filename);
+                xmlDoc.Load(_Path + _Filename);
 
                 DesencriptarXML(xmlDoc, key);
-            //}
+                xmlDoc.Save(_Path+"DecryptedDoc.xml");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            finally
+            {
+                if(key != null)
+                {
+                    key.Clear();
+                }
+            }   
         }
 
         /// <summary>
@@ -171,9 +185,126 @@ namespace Encriptaciones
         /// <summary>
         /// Encriptar un XML
         /// </summary>
-        public void EncriptarXML()
+        public void EncriptarXML(XmlDocument Doc,string ElementName, SymmetricAlgorithm Key)
         {
+            // Check the arguments.  
+            if (Doc == null)
+                throw new ArgumentNullException("Doc");
+            if (ElementName == null)
+                throw new ArgumentNullException("ElementToEncrypt");
+            if (Key == null)
+                throw new ArgumentNullException("Alg");
 
+            ////////////////////////////////////////////////
+            // Find the specified element in the XmlDocument
+            // object and create a new XmlElemnt object.
+            ////////////////////////////////////////////////
+            XmlElement elementToEncrypt = Doc.GetElementsByTagName(ElementName)[0] as XmlElement;
+            // Throw an XmlException if the element was not found.
+            if (elementToEncrypt == null)
+            {
+                throw new XmlException("The specified element was not found");
+
+            }
+
+            //////////////////////////////////////////////////
+            // Create a new instance of the EncryptedXml class 
+            // and use it to encrypt the XmlElement with the 
+            // symmetric key.
+            //////////////////////////////////////////////////
+
+            EncryptedXml eXml = new EncryptedXml();
+
+            byte[] encryptedElement = eXml.EncryptData(elementToEncrypt, Key, false);
+            ////////////////////////////////////////////////
+            // Construct an EncryptedData object and populate
+            // it with the desired encryption information.
+            ////////////////////////////////////////////////
+
+            EncryptedData edElement = new EncryptedData();
+            edElement.Type = EncryptedXml.XmlEncElementUrl;
+
+            // Create an EncryptionMethod element so that the 
+            // receiver knows which algorithm to use for decryption.
+            // Determine what kind of algorithm is being used and
+            // supply the appropriate URL to the EncryptionMethod element.
+
+            string encryptionMethod = null;
+
+            if (Key is TripleDES)
+            {
+                encryptionMethod = EncryptedXml.XmlEncTripleDESUrl;
+            }
+            else if (Key is DES)
+            {
+                encryptionMethod = EncryptedXml.XmlEncDESUrl;
+            }
+            if (Key is Rijndael)
+            {
+                switch (Key.KeySize)
+                {
+                    case 128:
+                        encryptionMethod = EncryptedXml.XmlEncAES128Url;
+                        break;
+                    case 192:
+                        encryptionMethod = EncryptedXml.XmlEncAES192Url;
+                        break;
+                    case 256:
+                        encryptionMethod = EncryptedXml.XmlEncAES256Url;
+                        break;
+                }
+            }
+            else
+            {
+                // Throw an exception if the transform is not in the previous categories
+                throw new CryptographicException("The specified algorithm is not supported for XML Encryption.");
+            }
+
+            edElement.EncryptionMethod = new EncryptionMethod(encryptionMethod);
+
+            // Add the encrypted element data to the 
+            // EncryptedData object.
+            edElement.CipherData.CipherValue = encryptedElement;
+
+            ////////////////////////////////////////////////////
+            // Replace the element from the original XmlDocument
+            // object with the EncryptedData element.
+            ////////////////////////////////////////////////////
+            EncryptedXml.ReplaceElement(elementToEncrypt, edElement, false);
+        }
+
+        public void GestionDatos(bool bEncrypt, bool bDecrypt)
+        {
+            try
+            {
+                key = new RijndaelManaged();
+                XmlDocument xmlDoc = new XmlDocument();
+                xmlDoc.PreserveWhitespace = true;
+                xmlDoc.Load(_Path + _Filename);
+                if (bEncrypt)
+                {
+                    EncriptarXML(xmlDoc, "User", key);
+                    xmlDoc.Save(_Path+"EncryptedDoc.xml");
+
+                }
+                if (bDecrypt)
+                {
+                    xmlDoc.Load(_Path + "EncryptedDoc.xml");
+                    DesencriptarXML(xmlDoc, key);
+                    xmlDoc.Save(_Path+"DecryptedDoc.xml");
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            finally
+            {
+                if (key != null)
+                {
+                    key.Clear();
+                }
+            }
         }
         #endregion
     }

@@ -116,6 +116,10 @@ namespace Encriptaciones
             {
                 MessageBox.Show("Credenciales incorrectas");
             }
+            catch (ArgumentNullException)
+            {
+                MessageBox.Show("Error al coger las credenciales");
+            }
         }
 
         /// <summary>

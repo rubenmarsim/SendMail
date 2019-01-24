@@ -5,7 +5,6 @@ using System.Windows.Forms;
 using System.Xml;
 using System.Security.Cryptography;
 using System.Security.Cryptography.Xml;
-//using System.Security.Cryptography.Xml;
 
 namespace Encriptaciones
 {

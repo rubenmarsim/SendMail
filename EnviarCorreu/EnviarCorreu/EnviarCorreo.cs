@@ -42,12 +42,12 @@ namespace EnviarCorreu
 
         private void btnEncrypt_Click(object sender, EventArgs e)
         {
-            CGestorCorreo.GestionDatos(true, false);
+            CGestorCorreo.GestionDatos(true, true, false);
         }
 
         private void btnDecrypt_Click(object sender, EventArgs e)
         {
-            CGestorCorreo.GestionDatos(false, true);
+            CGestorCorreo.GestionDatos(true, false, true);
         }
     }
 }

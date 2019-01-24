@@ -39,15 +39,5 @@ namespace EnviarCorreu
             CGestorCorreo.EnviarMail(txtBoxAsunto.Text, txtBoxContenido.Text, txtBoxPara.Text);
         }
         #endregion
-
-        private void btnEncrypt_Click(object sender, EventArgs e)
-        {
-            CGestorCorreo.GestionDatos(true, true, false);
-        }
-
-        private void btnDecrypt_Click(object sender, EventArgs e)
-        {
-            CGestorCorreo.GestionDatos(true, false, true);
-        }
     }
 }

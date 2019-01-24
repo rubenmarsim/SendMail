@@ -36,15 +36,11 @@
             this.btnEnviar = new System.Windows.Forms.Button();
             this.txtBoxContenido = new System.Windows.Forms.TextBox();
             this.txtBoxPara = new System.Windows.Forms.TextBox();
-            this.btnEncrypt = new System.Windows.Forms.Button();
-            this.btnDecrypt = new System.Windows.Forms.Button();
             this.grpBoxEnviarCorreu.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpBoxEnviarCorreu
             // 
-            this.grpBoxEnviarCorreu.Controls.Add(this.btnDecrypt);
-            this.grpBoxEnviarCorreu.Controls.Add(this.btnEncrypt);
             this.grpBoxEnviarCorreu.Controls.Add(this.lblAsunto);
             this.grpBoxEnviarCorreu.Controls.Add(this.txtBoxAsunto);
             this.grpBoxEnviarCorreu.Controls.Add(this.lblContenido);
@@ -123,26 +119,6 @@
             this.txtBoxPara.TabIndex = 1;
             this.txtBoxPara.Text = "ruben.martinez.simon@sarria.salesians.cat";
             // 
-            // btnEncrypt
-            // 
-            this.btnEncrypt.Location = new System.Drawing.Point(133, 323);
-            this.btnEncrypt.Name = "btnEncrypt";
-            this.btnEncrypt.Size = new System.Drawing.Size(75, 23);
-            this.btnEncrypt.TabIndex = 10;
-            this.btnEncrypt.Text = "Encrypt";
-            this.btnEncrypt.UseVisualStyleBackColor = true;
-            this.btnEncrypt.Click += new System.EventHandler(this.btnEncrypt_Click);
-            // 
-            // btnDecrypt
-            // 
-            this.btnDecrypt.Location = new System.Drawing.Point(234, 323);
-            this.btnDecrypt.Name = "btnDecrypt";
-            this.btnDecrypt.Size = new System.Drawing.Size(75, 23);
-            this.btnDecrypt.TabIndex = 11;
-            this.btnDecrypt.Text = "Decrypt";
-            this.btnDecrypt.UseVisualStyleBackColor = true;
-            this.btnDecrypt.Click += new System.EventHandler(this.btnDecrypt_Click);
-            // 
             // EnviarCorreo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -169,8 +145,6 @@
         private System.Windows.Forms.TextBox txtBoxPara;
         private System.Windows.Forms.Label lblAsunto;
         private System.Windows.Forms.TextBox txtBoxAsunto;
-        private System.Windows.Forms.Button btnEncrypt;
-        private System.Windows.Forms.Button btnDecrypt;
     }
 }
 

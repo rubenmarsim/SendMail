@@ -4,6 +4,21 @@
         <name>MantenimientoXML</name>
     </assembly>
     <members>
+        <member name="M:MantenimientoXML.frmMantXML.frmMantXML_Load(System.Object,System.EventArgs)">
+            <summary>
+            Desencripta el XML y coge las credenciales, que en este caso 
+            son el user y el password
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MantenimientoXML.frmMantXML.btnUpdate_Click(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
         <member name="F:MantenimientoXML.frmMantXML.components">
             <summary>
             Variable del diseñador necesaria.

@@ -85,5 +85,20 @@
             <param name="Alg">Tipo de encriptacion</param>
             <param name="KeyName">keyname</param>
         </member>
+        <member name="M:Encriptaciones.GestorCorreo.GestionDatos(System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Metodo para encriptar y desencriptar con claves simetricas y asimetricas
+            </summary>
+            <param name="IsAsimetric">Determina si se ejecuta la enciptacion asimetrica o la simetrica</param>
+            <param name="bEncrypt">Determina si se encripta o no</param>
+            <param name="bDecrypt">Determina si se desencripta o no</param>
+        </member>
+        <member name="M:Encriptaciones.GestorCorreo.UpdateXML(System.String,System.String)">
+            <summary>
+            Actualiza el XML
+            </summary>
+            <param name="user">usuario del email</param>
+            <param name="paswd">contraseña del email</param>
+        </member>
     </members>
 </doc>

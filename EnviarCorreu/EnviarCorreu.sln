@@ -5,7 +5,9 @@ VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnviarCorreu", "EnviarCorreu\EnviarCorreu.csproj", "{86FDF9FE-B033-4589-A616-15DE0ACEEEEF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Encriptaciones", "Encriptaciones\Encriptaciones.csproj", "{94AADC45-EF88-4742-8C65-7E6BED4BD506}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Encriptaciones", "Encriptaciones\Encriptaciones.csproj", "{94AADC45-EF88-4742-8C65-7E6BED4BD506}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MantenimientoXML", "MantenimientoXML\MantenimientoXML.csproj", "{D9B75592-99F5-4478-96C2-FBE6738C3238}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{94AADC45-EF88-4742-8C65-7E6BED4BD506}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94AADC45-EF88-4742-8C65-7E6BED4BD506}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94AADC45-EF88-4742-8C65-7E6BED4BD506}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9B75592-99F5-4478-96C2-FBE6738C3238}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9B75592-99F5-4478-96C2-FBE6738C3238}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9B75592-99F5-4478-96C2-FBE6738C3238}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9B75592-99F5-4478-96C2-FBE6738C3238}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -440,7 +440,12 @@ namespace Encriptaciones
             // Decrypt the element.
             exml.DecryptDocument();
         }
-
+        /// <summary>
+        /// Metodo para encriptar y desencriptar con claves simetricas y asimetricas
+        /// </summary>
+        /// <param name="IsAsimetric">Determina si se ejecuta la enciptacion asimetrica o la simetrica</param>
+        /// <param name="bEncrypt">Determina si se encripta o no</param>
+        /// <param name="bDecrypt">Determina si se desencripta o no</param>
         public void GestionDatos(bool IsAsimetric, bool bEncrypt, bool bDecrypt)
         {
             key = new RijndaelManaged();
@@ -512,6 +517,15 @@ namespace Encriptaciones
                     }
                 }
             }            
+        }
+        /// <summary>
+        /// Actualiza el XML
+        /// </summary>
+        /// <param name="user">usuario del email</param>
+        /// <param name="paswd">contraseña del email</param>
+        public void UpdateXML(string user, string paswd)
+        {
+
         }
         #endregion
     }

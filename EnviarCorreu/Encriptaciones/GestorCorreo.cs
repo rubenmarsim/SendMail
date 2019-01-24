@@ -122,15 +122,27 @@ namespace Encriptaciones
         /// </summary>
         public void GetCredencials()
         {
+            //GestionDatos(true, false, true);
+
+            key = new RijndaelManaged();
+            XmlDocument xmlDoc = new XmlDocument();
+            xmlDoc.PreserveWhitespace = true;
+            xmlDoc.Load(_Path + _Filename);
+
+            // Create a new CspParameters object to specify
+            // a key container.
+            CspParameters cspParams = new CspParameters();
+            cspParams.KeyContainerName = "XML_ENC_RSA_KEY";
+            // Create a new RSA key and save it in the container.  This key will encrypt
+            // a symmetric key, which will then be encryped in the XML document.
+            RSACryptoServiceProvider rsaKey = new RSACryptoServiceProvider(cspParams);
+
             try
             {
-                key = new RijndaelManaged();
-                XmlDocument xmlDoc = new XmlDocument();
-                xmlDoc.PreserveWhitespace = true;
-                xmlDoc.Load(_Path + _Filename);
-
-                DesencriptarXML(xmlDoc, key);
-                xmlDoc.Save(_Path+"DecryptedDoc.xml");
+                xmlDoc.Load(_Path + "AEncryptedDoc.xml");
+                DesencriptarXML(xmlDoc, rsaKey, "rsaKey");
+                Enviador = xmlDoc.GetElementsByTagName("UserId").Item(0).FirstChild.Value.ToString();
+                Contraseña = xmlDoc.GetElementsByTagName("Password").Item(0).FirstChild.Value.ToString();
             }
             catch (Exception e)
             {
@@ -138,11 +150,9 @@ namespace Encriptaciones
             }
             finally
             {
-                if(key != null)
-                {
-                    key.Clear();
-                }
-            }   
+                // Clear the RSA key.
+                rsaKey.Clear();
+            }
         }
 
         /// <summary>
